@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8"> <!-- 문자 인코딩 -->
+	<title>PRADA</title> <!-- 브라우저 타이틀 -->
+	<link rel="stylesheet" type="text/css" href="css/base.css" /><!-- CSS링크 --> 
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/jquery.slides.body.js"></script>
+	<script src="js/jquery.slides.min.js"></script>
+    
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> <!-- 파비콘 --> 
+	
+	<script type="text/javascript" src="js/base.js"></script> <!-- 햄버거 메뉴펼침 -->
+	<script src="js/burger.js"></script> <!-- 햄버거 메뉴 -->
+</head>
+
+
+<body>
+	<!-- header 영역(로고포함) 시작-->
+	<header>
+		<h1 class="logo"><a href="index.html">HOME</a></h1>
+		
+		<ul class="menubar">
+			<li class="li1"><a href="sub1.html">PRADA STORY</a></li>
+			<li class="li2"><a href="sub2.html">WOMEN</a></li>
+			<li class="li3"><a href="sub3.html">MEN</a></li>
+			<li class="li4"><a href="sub4.html">ACC</a></li>
+			<li class="li5"><a href="sub5.html">COLLECTIONS</a></li>
+		</ul>
+	</header>
+	<!-- //헤더영역 끝-->
+	
+		<!-- 햄버거 메뉴 menu바 -->
+		<div class="menu">
+			<div class="menu_in">
+				<h1 class="logo"><a href="index.html">HOME</a></h1>
+				<h2 class="menubtn"><a href="#n">MENU</a></h2>
+			</div>
+		</div>
+		<!-- //menu -->
+	
+		<!-- menuon 펼쳐진거 -->
+		<div class="menuon">
+			<div class="close"><a href="#n">메뉴닫기</a></div>
+			<ul class="menubar_on">
+				<li class="li1"><a href="sub1.html">PRADA STORY</a></li>
+				<li class="li2"><a href="sub2.html">WOMEN</a></li>
+				<li class="li3"><a href="sub3.html">MEN</a></li>
+				<li class="li4"><a href="sub4.html">ACC</a></li>
+				<li class="li5"><a href="sub5.html">COLLECTIONS</a></li>
+			</ul> 
+			<!-- sub1 -->
+			<ul class="menu_sub1">
+				<li class="li1"><a href="sub1.html">Prada Group</a></li>
+				<li class="li2"><a href="sub1.html">Fondazione Prada</a></li>
+				<li class="li3"><a href="sub1.html">Luna Rossa</a></li>
+				<li class="li4"><a href="sub1.html">Sustainability</a></li>
+				<li class="li5"><a href="sub1.html">Work with us</a></li>
+			</ul> 
+			<ul class="menu_sub2">
+				<li class="li1"><a href="sub2.html">New arrival</a></li>
+				<li class="li2"><a href="sub2.html">Outerwear</a></li>
+				<li class="li3"><a href="sub2.html">Trousers</a></li>
+				<li class="li4"><a href="sub2.html">Skirts</a></li>
+				<li class="li5"><a href="sub2.html">Dresses</a></li>
+			</ul>
+			<ul class="menu_sub3">
+				<li class="li1"><a href="sub3.html">New arrival</a></li>
+				<li class="li2"><a href="sub3.html">Outerwear</a></li>
+				<li class="li3"><a href="sub3.html">Trousers</a></li>
+				<li class="li4"><a href="sub3.html">Shirts</a></li>
+				<li class="li5"><a href="sub3.html">Suits</a></li>
+			</ul>
+			<ul class="menu_sub4">
+				<li class="li1"><a href="sub4.html">Bags</a></li>
+				<li class="li2"><a href="sub4.html">Wallets</a></li>
+				<li class="li3"><a href="sub4.html">Hats</a></li>
+				<li class="li4"><a href="sub4.html">gloves</a></li>
+				<li class="li5"><a href="sub4.html">Belts</a></li>
+			</ul>
+			<ul class="menu_sub5">
+				<li class="li1"><a href="sub5.html">2021</a></li>
+				<li class="li2"><a href="sub5.html">2020</a></li>
+				<li class="li3"><a href="sub5.html">2019</a></li>
+				<li class="li4"><a href="sub5.html">2018</a></li>
+				<li class="li5"><a href="sub5.html">2017</a></li>
+			</ul>
+		</div>
+		<!-- menuon 텍스트로 된거 끝-->
+	
+		<script>
+		$('.menubtn a').click(function() {  
+			$('.menuon').fadeIn('');  
+		});
+		$('.menuon .close a').click(function() {  
+			$('.menuon').fadeOut('');  
+		});
+		</script>
+		<!-- //menuon -->
+	
+	<!-- 컨텐츠 시작 -->
+	<div class="cont">
+		<img src="img/sub4.jpg" usemap="#Map">
+		
+		<!-- 푸터 프라다 그룹 클릭 시 서브1로 이동 -->
+		<div class="pradagroup4"><a href="sub1.html">group</a></div>
+		
+		<div class="gotop"><a href="#">TOP</a></div><!--탑으로 올라가는 버튼 -->
+	</div>
+	<!-- //컨텐츠 -->
+</body>
+</html>

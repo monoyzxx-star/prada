@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8"> <!-- 문자 인코딩 -->
+	<title>PRADA</title> <!-- 브라우저 타이틀 -->
+	<link rel="stylesheet" type="text/css" href="css/base.css" /><!-- CSS링크 --> 
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/jquery.slides.body.js"></script>
+	<script src="js/jquery.slides.min.js"></script>
+    
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> <!-- 파비콘 -->
+
+	<!-- overlay : 하단2 동영상 클릭 시 오버레이 창 뜨는거--> 
+	<link rel="stylesheet" type="text/css" href="css/overlay_style.css" />
+  	<script src="js/overlay_modernizr.custom.js"></script>
+	
+	<script type="text/javascript" src="js/base.js"></script> <!-- 햄버거 메뉴펼침 -->
+	<script src="js/burger.js"></script> <!-- 햄버거 메뉴 -->
+</head>
+
+
+<body>
+	<!-- header 영역(로고포함) 시작-->
+	<header>
+		<h1 class="logo"><a href="index.html">HOME</a></h1>
+		
+		<ul class="menubar">
+			<li class="li1"><a href="sub1.html">PRADA STORY</a></li>
+			<li class="li2"><a href="sub2.html">WOMEN</a></li>
+			<li class="li3"><a href="sub3.html">MEN</a></li>
+			<li class="li4"><a href="sub4.html">ACC</a></li>
+			<li class="li5"><a href="sub5.html">콜렉션</a></li>
+		</ul>
+
+		<!-- 영상 위 메뉴-->
+		<div class="gnb">
+			<img src="img/submenu.png" alt="submenu">
+		</div>
+		
+		<!-- 햄버거 메뉴 menu바 -->
+		<div class="menu">
+			<div class="menu_in">
+				<h1 class="logo"><a href="index.html">HOME</a></h1>
+				<h2 class="menubtn"><a href="#n">MENU</a></h2>
+			</div>
+		</div>
+		<!-- //menu -->
+		
+		<!-- menuon 펼쳐진거 -->
+		<div class="menuon">
+			<div class="close"><a href="#n">메뉴닫기</a></div>
+			<ul class="menubar_on">
+				<li class="li1"><a href="sub1.html">PRADA STORY</a></li>
+				<li class="li2"><a href="sub2.html">WOMEN</a></li>
+				<li class="li3"><a href="sub3.html">MEN</a></li>
+				<li class="li4"><a href="sub4.html">ACC</a></li>
+				<li class="li5"><a href="sub5.html">COLLECTIONS</a></li>
+			</ul> 
+			<!-- sub1 -->
+			<ul class="menu_sub1">
+				<li class="li1"><a href="sub1.html">Prada Group</a></li>
+				<li class="li2"><a href="sub1.html">Fondazione Prada</a></li>
+				<li class="li3"><a href="sub1.html">Luna Rossa</a></li>
+				<li class="li4"><a href="sub1.html">Sustainability</a></li>
+				<li class="li5"><a href="sub1.html">Work with us</a></li>
+			</ul> 
+			<ul class="menu_sub2">
+				<li class="li1"><a href="sub2.html">New arrival</a></li>
+				<li class="li2"><a href="sub2.html">Outerwear</a></li>
+				<li class="li3"><a href="sub2.html">Trousers</a></li>
+				<li class="li4"><a href="sub2.html">Skirts</a></li>
+				<li class="li5"><a href="sub2.html">Dresses</a></li>
+			</ul>
+			<ul class="menu_sub3">
+				<li class="li1"><a href="sub3.html">New arrival</a></li>
+				<li class="li2"><a href="sub3.html">Outerwear</a></li>
+				<li class="li3"><a href="sub3.html">Trousers</a></li>
+				<li class="li4"><a href="sub3.html">Shirts</a></li>
+				<li class="li5"><a href="sub3.html">Suits</a></li>
+			</ul>
+			<ul class="menu_sub4">
+				<li class="li1"><a href="sub4.html">Bags</a></li>
+				<li class="li2"><a href="sub4.html">Wallets</a></li>
+				<li class="li3"><a href="sub4.html">Hats</a></li>
+				<li class="li4"><a href="sub4.html">gloves</a></li>
+				<li class="li5"><a href="sub4.html">Belts</a></li>
+			</ul>
+			<ul class="menu_sub5">
+				<li class="li1"><a href="sub5.html">2021</a></li>
+				<li class="li2"><a href="sub5.html">2020</a></li>
+				<li class="li3"><a href="sub5.html">2019</a></li>
+				<li class="li4"><a href="sub5.html">2018</a></li>
+				<li class="li5"><a href="sub5.html">2017</a></li>
+			</ul>
+		</div>
+		<!-- menuon 텍스트로 된거 끝-->
+		
+		<script>
+		$('.menubtn a').click(function() {  
+			$('.menuon').fadeIn('');  
+		});
+		$('.menuon .close a').click(function() {  
+			$('.menuon').fadeOut('');  
+		});
+		</script>
+		<!-- //menuon -->
+		
+		
+		<!-- 햄버거 메뉴
+		<div class="burger">
+			<a href="#" class="hamburger-button">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</a>
+		</div> 
+		
+		<div class="overlay">
+			<nav class="menu">
+				<ul>
+					<li><a href="#">PRADA STORY</a></li>
+					<li><a href="#">WOMEN</a></li>
+					<li><a href="#">MEN</a></li>
+					<li><a href="#">ACC</a></li>
+					<li><a href="#">COLLECTIONS</a></li>
+				</ul>
+			</nav>
+		</div> -->
+		
+	</header>
+	<!-- //header 영역(로고포함) 끝-->
+
+	<!-- 상단 비쥬얼 시작 -->
+	<div class="mainimg">
+		<div id="slides">
+			<div><a href="sub5.html"><img src="img/mainslide1.jpg" alt="" title=""></a></div>
+			<div><img src="img/mainslide2.jpg" alt="" title=""></div>
+			
+			<!-- 상단 비디오 -->
+			<div class="video">
+			    <!------------- 영상위 페이지 네비게이션 이미지를 고쳐보세요!!!!!!  ------------------>
+				<div class="video_img1"><img src="img/pagination.png" width="50px" height="10px"></div>
+			
+				<a href="sub4.html"><video muted autoplay loop width="100%">
+				<source src="videos/main_video1.mp4" type="video/webm">
+				</video></a>
+			</div>
+			
+			<!-- 좌우 롤링버튼 및 페이지 네비게이션 -->	
+			<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
+			<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>	
+		</div>
+	
+		<!-- 좌우 롤링버튼 -->
+		<div class="right_wheel"><a href="">우로</a></div>
+		<div class="left_wheel"><a href="">좌로</a></div>
+		
+		<!-- 하부로 내려가는 버튼 -->
+		<div class="wheel"><a href="#main">아래로</a></div>
+	</div>	
+	<!-- //상단 비쥬얼 끝 -->
+	
+	
+	<!-- 하부 컨텐츠1 NEW ARRIVAL -->
+	<div class="cont1_wrap">
+		<div class="main" id="main">
+			<div class="main1_btn1"><a href="sub4.html" onclick="openLayer('layer_go')">go</a></div><!-- 이미지 마우스 롤오버 -->
+			
+			<!-- 하부 컨텐츠2 NEW COLLECTION -->		
+			<ul class="menubar2">
+				<li class="li6"><a href="sub2.html">WOMEN2</a></li>
+				<li class="li7"><a href="sub3.html">MEN2</a></li>
+			</ul> <!-- 글자 클릭 시 서브1, 서브2로 이동 -->
+			
+			<div class="main1_btn2"><a href="sub5.html" onclick="openLayer('layer_go')">go</a></div><!-- 이미지 마우스 롤오버 -->
+			
+			<!-- 하부 컨텐츠3 PRADASPHERE -->
+			<div class="LATESTNEWS02"><a href="sub3.html">LATESTNEWS</a></div> <!-- 남자 이미지 클릭 시 서브2로 이동 -->
+			
+			<div class="latestnews"><a href="">latestnews</a></div> <!-- 타이포 -->
+			
+			<div class="main1_btn3"><a href="" onclick="openLayer('layer_go')">go</a></div>
+			<div class="main1_btn4"><a href="sub3.html" onclick="openLayer('layer_go')">go</a></div><!-- 이미지 마우스 롤오버 -->
+			
+			<!--하단 컨텐츠4 BRAND IDENTITY 영상 시작-->
+			<div>
+				<div class="trigger-overlay">
+					<button id="trigger-overlay" type="button"><img src="img/play_button.png"></button>
+				</div>
+
+				<!-- 하부 컨텐츠 영상 open/close  -->
+				<div class="overlay overlay-door">
+					<div><button type="button" class="overlay-close"><img src="img/main_close.png" ></button></div>
+					
+					<nav>
+						<ul>
+							<li>
+								<video controls loop poster="img/main_video2.jpg" width="1500px" height="800px">
+									<source src="videos/main_video2.mp4" type="video/mp4">
+								</video>
+							</li>
+						</ul>
+					</nav>
+					
+				</div>
+				<script src="js/overlay_classie.js"></script>
+				<script src="js/overlay_demo1.js"></script>
+			</div>
+			<!--하단컨텐츠 영상 끝-->
+			
+			
+			<!-- 푸터 프라다 그룹 클릭 시 서브1로 이동 -->
+			<div class="pradagroup"><a href="sub1.html">group</a></div>
+			
+			<div class="gotop"><a href="#">TOP</a></div><!--탑으로 올라가는 버튼 -->
+		</div>	
+	</div>
+    <!-- // 하부 컨텐츠 끝 -->
+	
+</body>
+</html>

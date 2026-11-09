@@ -1,0 +1,366 @@
+* {padding:0; margin:0; list-style:none; box-sizing:border-box; box-sizing:content-box;}
+a{ text-decoration:none; }
+img {border:0; margin:0 0 -5px -2px;}
+
+/* 1.폰트적용방법 :구글 서버에서 나눔고딕 폰트 링크 해오기 */ 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  body, table, div, p{font-family:'Nanum Gothic'; color: #666666; font-size:14px; }   
+
+/* 2.폰트적용방법 : 서버에 업로드 후 다운, 브라우저 상황에 상관없이 두개다 다운 
+@font-face{font-family:'Nanum Gothic'; src:url('/fonts/NanumGothic.woff')}
+@font-face{font-family:'Nanum Gothic'; src:url('/fonts/NanumGothic.eot')}
+ 
+body, table, div, p {font-family:'Nanum Gothic';}
+*/
+
+/* 3.폰트적용방법 : 브라우저 환경에 맞게 다운 
+@font-face{
+	font-family:"Nanum Gothic";
+	src:url('/fonts/NanumGothic.eot');
+	src:url('/fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),
+	url('/fonts/NanumGothic.woff') format('woff'),
+	url('/fonts/NanumGothic.ttf') format('truetype');
+	url('/fonts/NanumGothic.svg#NanumGothic') format('svg')
+	src:local(※), url('/fonts/NanumGothic.woff') format('woff');
+}
+*/
+  
+body {overflow-x:hidden; width:1900px; margin:0 auto;}/* 가로스크롤 없애기. 전체화면 좌우 가운데 정렬 */
+
+
+
+/* 헤더영역 */
+header{ position:absolute; width:1900px; height:130px; z-index:111; border:0px solid red; }/* 나중에 1픽셀 보더값 없애시면 됩니다. */
+
+	/* main gnb */
+	.gnb {position:absolute; width:100%; z-index:12; left: 1px; top:50px;}
+	
+	/* 로고 (로고 사이즈와 위치 수치 고쳐야함)*/
+	.logo a {position:absolute; top:37px; left:133px; display:block; width:210px; height:50px; text-indent:-1111111px; background:url('../img/n.gif') no-repeat 0 0; 
+		border:0px solid red; z-index:1111; }
+		
+	/* 메뉴바 (로고 사이즈와 위치 수치 고쳐야함)*/
+	.menubar {position:absolute; left:1002px; top:41px; width:640px; height:45px; border:0px solid red; z-index:1111;}
+
+		.menubar li {float:left; border:0px solid blue;}
+		.menubar li a {display:block; text-indent:-1111111px; background:url('../img/n.gif') no-repeat 0 0; border:px solid red;}
+			.li1 a {width:171px; height:45px;}
+			.li2 a {width:120px; height:45px;}
+			.li3 a {width:83px; height:45px;}
+			.li4 a {width:87px; height:45px;}
+			.li5 a {width:167px; height:45px;} 
+			
+			
+
+		/* 햄버거 메뉴 버튼 */
+		.menubtn a {z-index:111; position:absolute; right:147px; top:49px; display:block; width:30px; height:30px; overflow:hidden; text-indent:-1111111px;background:url('../img/n.gif') no-repeat 0 0;  border:0px solid green;}
+
+		/* 펼친메뉴바 메뉴바 */
+		.menuon {display:none; position:fixed; right:0; top:0; bottom:0; width:1900px; background:rgba(1,1,1,0.9); z-index:9999999; }
+
+		/* 펼친메뉴바 닫기버튼 */
+		.menuon .close a {position:absolute; right:152px; top:54px; ; display:block; width:23px; height:23px; overflow:hidden; text-indent:-1111111px; background:url('../img/btn_close2.png') no-repeat 0 0; z-index:5555555; border:0px solid blue;}
+		
+		.menuon .menubar_on {position:absolute; width:1800px; top:370px; left:410px; }
+		
+		.menuon .menubar_on li {float:left; top:200px; border:0px solid blue; font-weight:bold; font-size:20px;  }
+		
+		.menubar_on .li1 a{display:block; color:#fff; width:300px; height:30px; border:0px solid blue;}
+		.menubar_on .li2 a{display:block; color:#fff; width:240px; height:30px; border:0px solid blue;}
+		.menubar_on .li3 a{display:block; color:#fff; width:205px; height:30px; border:0px solid blue;}
+		.menubar_on .li4 a{display:block; color:#fff; width:199px; height:30px; border:0px solid blue;}
+		.menubar_on .li5 a{display:block; color:#fff; width:133px; height:30px; border:0px solid blue;}
+		
+		.menubar_on li a:hover{color:#8e8e8e;}
+		
+
+
+		/* sub1 서브메뉴*/
+		.menu_sub1 {position:absolute; left:410px; top:420px;  z-index:5555555;  }
+		.menu_sub1 li { border:0px solid blue; }
+		.menu_sub1 li a { width:150px; height:34px; font-size:16px; display:block; color:#ddd;   background:url('../img/n.gif') no-repeat 0 0;}
+
+		.menu_sub2 {position:absolute; left:710px; top:420px;  z-index:5555555;  }
+		.menu_sub2 li { border:0px solid blue; }
+		.menu_sub2 li a { width:150px; height:34px; font-size:16px; display:block; color:#ddd;   background:url('../img/n.gif') no-repeat 0 0;}
+
+		.menu_sub3 {position:absolute; left:950px; top:420px;  z-index:5555555;  }
+		.menu_sub3 li { border:0px solid blue; }
+		.menu_sub3 li a { width:150px; height:34px; font-size:16px; display:block; color:#ddd;   background:url('../img/n.gif') no-repeat 0 0;}
+
+		.menu_sub4 {position:absolute; left:1155px; top:420px;  z-index:5555555;  }
+		.menu_sub4 li { border:0px solid blue; }
+		.menu_sub4 li a { width:150px; height:34px; font-size:16px; display:block; color:#ddd;   background:url('../img/n.gif') no-repeat 0 0;}
+
+		.menu_sub5 {position:absolute; left:1355px; top:420px;  z-index:5555555;  }
+		.menu_sub5 li { border:0px solid blue; }
+		.menu_sub5 li a { width:150px; height:34px; font-size:16px; display:block; color:#ddd;   background:url('../img/n.gif') no-repeat 0 0;}
+
+	  	.menu_sub1 .li1 a {width:92px;}
+		.menu_sub1 .li2 a {width:131px;}
+		.menu_sub1 .li3 a {width:82px;}
+		.menu_sub1 .li4 a {width:97px;}
+		.menu_sub1 .li5 a {width:97px;}
+
+	  	.menu_sub2 .li1 a {width:82px;}
+		.menu_sub2 .li2 a {width:78px;}
+		.menu_sub2 .li3 a {width:60px;}
+		.menu_sub2 .li4 a {width:40px;}
+		.menu_sub2 .li5 a {width:55px;}
+
+	  	.menu_sub3 .li1 a {width:82px;}
+		.menu_sub3 .li2 a {width:78px;}
+		.menu_sub3 .li3 a {width:60px;}
+		.menu_sub3 .li4 a {width:41px;}
+		.menu_sub3 .li5 a {width:35px;}
+
+	  	.menu_sub4 .li1 a {width:34px;}
+		.menu_sub4 .li2 a {width:53px;}
+		.menu_sub4 .li3 a {width:32px;}
+		.menu_sub4 .li4 a {width:47px;}
+		.menu_sub4 .li5 a {width:34px;}
+
+	  	.menu_sub5 .li1 a {width:34px;}
+		.menu_sub5 .li2 a {width:36px;}
+		.menu_sub5 .li3 a {width:36px;}
+		.menu_sub5 .li4 a {width:36px;}
+		.menu_sub5 .li5 a {width:36px;}
+
+		.menu_sub1 li a:hover{color:#8e8e8e; text-decoration:underline;}
+		.menu_sub2 li a:hover{color:#8e8e8e; text-decoration:underline;}
+		.menu_sub3 li a:hover{color:#8e8e8e; text-decoration:underline;}
+		.menu_sub4 li a:hover{color:#8e8e8e; text-decoration:underline;}
+		.menu_sub5 li a:hover{color:#8e8e8e; text-decoration:underline;}
+		
+
+	.mainimg {width:100%; height:985px; position:relative; border:0px solid red; overflow:hidden;}
+	.mainimg {width:100%; height:985px; position:relative; border:0px solid red; overflow:hidden;}
+	.video {width:100%; height:985px; position: relative; border:0px solid red; overflow:hidden;}
+	.video .video_img1 {position:absolute; right:152px; bottom:170px;}
+
+/* 햄버거 메뉴 
+.burger div{
+	width: 21px;
+	height: 2px;
+	background-color: red;
+	margin: 5.5px;
+}
+
+.overlay{
+	positionL:absolute;
+	z-index: 11111;
+	background: #141414;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	justify-contentL:center;
+	align-items: center;
+	transition: 0.3s;
+}
+nav1 ul{
+	list-style: none; padding: 0; margin: 0;
+}
+nav1 ul li{
+	margin:1rem 0;
+	opacity: 0;
+}
+nav1 ul li a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #fff;
+	opacity:0.6;
+	transition: opacity 0.2s ease;
+}
+nav1 ul li a:hover{
+	opacity: 1;
+}
+@keyframes fadeinLeft{
+	0% {opacity: 0; transform: translate(-25%);}
+	100% {opacity: 1; transform: translate(0);}
+}
+.overlay.visible{
+	height: 100%;
+	opacity: .85;
+	visibility: visible;
+}
+.overlay.visible nav1 ul li{
+	animation:fadeInLeft 0.3s ease forwards;
+}
+.overlay.visible nav1 ul li:nth-child(1){
+	animation-delay: 0.23s;
+}
+.overlay.visible nav1 ul li:nth-child(2){
+	animation-delay: 0.26s;
+}
+.overlay.visible nav1 ul li:nth-child(3){
+	animation-delay: 0.29s;
+}
+.overlay.visible nav1 ul li:nth-child(4){
+	animation-delay: 0.32s;
+}
+.overlay.visible nav1 ul li:nth-child(5){
+	animation-delay: 0.35s;
+}
+*/
+
+/* 상단비쥬얼 슬라이드 제어 */
+#slides {display:none; width:1900px; height:985px; z-index:1111 !important;}
+
+	/* 상단비쥬얼 좌우롤링 */
+	#slides a.slidesjs-previous, #slides a.slidesjs-next {position:absolute; top:451px; z-index:1111111 !important; display:block; width:55px; height:80px; background:url('../img/n.gif') no-repeat 0 0; text-indent:-1111111px; }
+	
+	#slides a.slidesjs-previous {left:132px; border:0px solid blue;} /* 좌우롤링버튼_왼쪽 위치 수정 */
+	#slides a.slidesjs-next {right:135px; border:0px solid red;} /* 좌우롤링버튼_오른쪽 위치수정 */ 
+
+	.right_wheel a {position:absolute; left:171px; top:464px; z-index:99; margin:0 0 0 -25px; text-indent:-111111px; width:25px; height:54px; background:url('../img/right_wheel.png') no-repeat; border:0px solid red;}
+	.left_wheel a {position:absolute; right:151px; top:465px; z-index:99; margin:0 0 0 -25px; text-indent:-111111px; width:25px; height:54px; background:url('../img/left_wheel.png') no-repeat; border:0px solid red; }
+		
+	/* 상단비쥬얼 페이지네이션 슬라이드 제어 */ 
+	#slides .slidesjs-pagination {position:absolute; right:144px; bottom:161px; z-index:111;}
+	#slides .slidesjs-pagination li {float:left; }
+	#slides .slidesjs-pagination li a {display:block; width:20px; height:25px; text-indent:-1111111px; background:url('../img/n.gif') no-repeat 0 0; border:0px solid green;} 
+	
+
+	/* 상단비쥬얼의 아래이동 버튼 */
+	.wheel a {position:absolute; left:49.8%; bottom:39px; z-index:99; margin:0 0 0 -25px; text-indent:-1111px; width:53px; height:25px; background:url('../img/wheel.png') no-repeat; border:0px solid red; }
+
+
+/* 메인 각섹션 컨텐츠영역 */
+.cont1_wrap {position:relative; background:url('') repeat center 0;}
+
+/************************ main ************************/
+/* 하부 콘텐츠 */
+.main {height:5634px; background:url('../img/main.jpg') no-repeat;}
+
+	/* 하부 컨텐츠1 NEW ARRIVAL 마우스 롤오버 */
+	.main1_btn1 a {position:absolute; left:681px; top:252px; display:block; width:540px; height:674px; border:0px solid red; text-indent:-1111111px; background:url('../img/title1.png') no-repeat 0 0;}
+	.main1_btn1 a:hover {background:url('../img/title1color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	/* 하부 컨텐츠2 NEW COLLECTION 글자 클릭 시 서브1,2로 이동 */
+	.menubar2 {position:absolute; right:200px; top:1375px; width:250px; height:40px; border:0px solid red; z-index:1111;}
+
+		.menubar2 li {float:left; border:0px solid blue;}
+		.menubar2 li a {display:block; text-indent:-1111111px; background:url('../img/n.gif') no-repeat 0 0;}
+			.li6 a {width:80px; height:40px; border:0px solid red;}
+			.li7 a {width:80px; height:40px; border:0px solid red;}
+
+	/* 하부 컨텐츠2 NEW COLLECTION 마우스 롤오버 */
+	.main1_btn2 a {position:absolute; left:308px; top:1442px; display:block; width:1284px; height:750px; border:0px solid red; text-indent:-1111111px; background:url('../img/title2.png') no-repeat 0 0;}
+	.main1_btn2 a:hover {background:url('../img/title2color.png') no-repeat 0 0; transition:all 0.4s;}
+
+	/* 하부 컨텐츠3 PRADASPHERE 남자 이미지 클릭 시 서브2로 이동 */
+	.LATESTNEWS02 a {position:absolute; top:3266px; left:-1px; display:block; width:470px; height:602px; text-indent:-1111111px; border:0px solid red;}
+	
+	/* #PRADA LATEST NEWS 타이포 */
+	.latestnews a {position:absolute; top:2667px; left:175px; z-index:99; margin:0 0 0 -25px; text-indent:-111111px; width:1312px; height:330px; background:url('../img/latestnews.png') no-repeat; border:0px solid red;}
+
+	/* 하부 컨텐츠3 PRADASPHERE 마우스 롤오버 */
+	.main1_btn3 a {position:absolute; top:2916px; right:0px; display:block; width:1270px; height:505px; border:0px solid red; z-indent:-111111px; text-indent:-1111111px; background:url('../img/title3.png') no-repeat 0 0;}
+	.main1_btn3 a:hover {background:url('../img/title3color.png') no-repeat 0 0; transition:all 0.4s; z-indent:-111111px;}
+
+	.main1_btn4 a {position:absolute; top:3266px; left:-1px; display:block; width:471px; height:604px; border:0px solid red; text-indent:-1111111px; background:url('../img/title4.png') no-repeat 0 0;}
+	.main1_btn4 a:hover {background:url('../img/title4color.png') no-repeat 0 0; transition:all 0.4s;}
+
+	/* 하부 컨텐츠4 BRAND IDENTITY 영상 */
+	.trigger-overlay {position:absolute; top:4393px; left:878px; cursor:pointer; border:0px solid red;}
+
+	/************************ sub1 ************************/
+
+	/* 서브1 하부 컨텐츠 HIGHLIGHTS 마우스 롤오버 */
+	.sub1_1 a {position:absolute; left:-152px; top:4881px; display:block; width:700px; height:700px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_1.png') no-repeat 0 0;}
+	.sub1_1 a:hover {background:url('../img/sub1_1color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub1_2 a {position:absolute; left:598px; top:4881px; display:block; width:700px; height:700px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_2.png') no-repeat 0 0;}
+	.sub1_2 a:hover {background:url('../img/sub1_2color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub1_3 a {position:absolute; right:-148px; top:4881px; display:block; width:700px; height:700px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_3.png') no-repeat 0 0;}
+	.sub1_3 a:hover {background:url('../img/sub1_3color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	/* 서브1 하부 컨텐츠 BRANDS 마우스 롤오버 */
+	.sub1_4 a {position:absolute; right:151px; top:5978px; display:block; width:777px; height:170px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_4.png') no-repeat 0 0;}
+	.sub1_4 a:hover {background:url('../img/sub1_4color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub1_5 a {position:absolute; right:165px; top:6198px; display:block; width:881px; height:170px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_5.png') no-repeat 0 0;}
+	.sub1_5 a:hover {right:157px; top:6198px; width:902px; height:170px; background:url('../img/sub1_5color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub1_6 a {position:absolute; right:160px; top:6418px; display:block; width:1088px; height:150px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_6.png') no-repeat 0 0;}
+	.sub1_6 a:hover {right:150px; top:6418px; width:1098px; height:170px; background:url('../img/sub1_6color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub1_7 a {position:absolute; right:152px; top:6638px; display:block; width:1057px; height:150px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_7.png') no-repeat 0 0;}
+	.sub1_7 a:hover {right:152px; top:6638px; width:1064px; height:170px; background:url('../img/sub1_7color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub1_8 a {position:absolute; right:155px; top:6859px; display:block; width:1534px; height:149px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub1_8.png') no-repeat 0 0;}
+	.sub1_8 a:hover {right:155px; top:6859px; width:1547px; height:169px; background:url('../img/sub1_8color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	/************************ sub2 ************************/
+
+	/* 서브2 트렌치 코트 이미지 클릭 시 서브말단페이지로 이동 */
+	.raincoat a {position:absolute; top:840px; left:1159px; display:block; width:589px; height:789px; text-indent:-1111111px; border:0px solid red;}
+
+	/* 서브말단 뒤로가기 ui 클릭 시 서브2로 이동 */
+	.back a {position:absolute; top:183px; left:141px; display:block; width:24px; height:30px; text-indent:-1111111px; border:0px solid red;}
+
+	/* 서브2 트렌치 코트 마우스 롤오버 */
+	.sub2_1 a {position:absolute; top:960px; left:549px; display:block; width:285px; height:385px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub2_1.png') no-repeat 0 0;}
+	.sub2_1 a:hover {background:url('../img/sub2_1color.png') no-repeat 0 0; transition:all 0.4s;}
+
+	/************************ sub5 ************************/
+
+	/* 서브5 하부 컨텐츠 마우스 롤오버 */
+	.sub5_1 a {position:absolute; right:662px; top:4523px; display:block; width:640px; height:840px; border:0px solid red; z-index:1; text-indent:-1111111px; background:url('../img/sub5_1.png') no-repeat 0 0;}
+	.sub5_1 a:hover {background:url('../img/sub5_1color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub5_2 a {position:absolute; right:252px; top:4353px; display:block; width:450px; height:450px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub5_2.png') no-repeat 0 0;}
+	.sub5_2 a:hover {background:url('../img/sub5_2color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	.sub5_3 a {position:absolute; left:148px; top:4226px; display:block; width:290px; height:360px; border:0px solid red; text-indent:-1111111px; background:url('../img/sub5_3.png') no-repeat 0 0;}
+	.sub5_3 a:hover {background:url('../img/sub5_3color.png') no-repeat 0 0;transition:all 0.4s;}
+
+	/* 푸터 프라다 그룹 클릭 시 서브1로 이동 */
+	.pradagroup a {position:absolute; bottom:117px; right:788px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+	.pradagroup1 a {position:absolute; bottom:115px; right:790px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+	.pradagroup2 a {position:absolute; bottom:115px; right:790px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+	.pradagroup2_1 a {position:absolute; bottom:115px; right:790px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+	.pradagroup3 a {position:absolute; bottom:115px; right:790px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+	.pradagroup4 a {position:absolute; bottom:115px; right:790px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+	.pradagroup5 a {position:absolute; bottom:115px; right:790px; display:block; width:90px; height:20px; text-indent:-1111111px; border:0px solid red;}
+
+
+/* 푸터 탑이동 버튼(텍스트로) 위치고정 */
+.gotop a {
+	position: fixed;
+	width: 60px;
+	line-height: 60px;
+	text-align: center;
+	right: 80px;
+	bottom: 40px;
+	color: #222;
+	font-size: 12px;
+	font-weight:700;
+	background: #9b9b9b;
+	z-index: 9999;
+	border-radius:50%; 
+	opacity:0.5; 
+	transition:all 0.4s; /* 마우스 오버시 모션효과 */
+}
+.gotop a:hover {opacity:1;}
+
+
+.footer {}
+.footer_in {}
+
+
+
+/******************** SUB5 ********************/
+
+/* sub 컨텐츠 영역 */
+.cont {position:relative; background:url('') repeat center 0;}
+
+	/* 영상 위 타이포 */
+	.sub5_typo a {position:absolute; bottom:411px; left:164px; z-index:99; margin:0 0 0 -25px; text-indent:-111111px; width:792px; height:339px; background:url('../img/sub5_typo.png') no-repeat; border:0px solid red;}
+
+	/* 서브5 하부 컨텐츠 영상 */
+	.collection_video{position:absolute; bottom:260px; width:100%; height:1080px; border:0px solid red;}
